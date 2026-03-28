@@ -1,0 +1,16 @@
+package com.example;
+
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class ShoppingCartTest {
+
+    @Test
+    public void testAddItem() {
+
+        ShoppingCart cart = new ShoppingCart();
+        cart.addItem("Laptop");
+
+        assertEquals(1, cart.getItemCount());
+    }
+}
