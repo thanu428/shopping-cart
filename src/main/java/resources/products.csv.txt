@@ -1,0 +1,6 @@
+id,name,price,quantity
+1,Laptop,55000,10
+2,Phone,25000,20
+3,Headphones,1500,50
+4,Keyboard,800,30
+5,Mouse,500,40
