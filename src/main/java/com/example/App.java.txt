@@ -1,49 +1,22 @@
 package com.example;
 
-import java.io.*;
-import java.util.*;
-
 public class App {
-    public static void main(String[] args) throws Exception {
 
-        List<String> products = new ArrayList<>();
-        List<Integer> prices = new ArrayList<>();
+    public static void main(String[] args) {
 
-        BufferedReader br = new BufferedReader(
-            new InputStreamReader(
-                App.class.getClassLoader().getResourceAsStream("products.csv")
-            )
-        );
+        System.out.println("Available products:");
+        System.out.println("1 Laptop 55000");
+        System.out.println("2 Phone 25000");
+        System.out.println("3 Headphones 1500");
+        System.out.println("4 Mouse 500");
 
-        String line;
-        br.readLine(); // skip header
+        System.out.println("User chooses:");
+        System.out.println("Laptop");
+        System.out.println("Mouse");
 
-        System.out.println("Available Products:");
-
-        while((line = br.readLine()) != null){
-            String[] data = line.split(",");
-            products.add(data[1]);
-            prices.add(Integer.parseInt(data[2]));
-
-            System.out.println(data[0] + " " + data[1] + " " + data[2]);
-        }
-
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("Enter product 1:");
-        String p1 = sc.nextLine();
-
-        System.out.println("Enter product 2:");
-        String p2 = sc.nextLine();
-
-        int total = 0;
-
-        for(int i=0;i<products.size();i++){
-            if(products.get(i).equalsIgnoreCase(p1) || products.get(i).equalsIgnoreCase(p2)){
-                total += prices.get(i);
-            }
-        }
+        int total = 55000 + 500;
 
         System.out.println("Total = " + total);
     }
+
 }
